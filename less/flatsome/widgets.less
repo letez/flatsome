@@ -1,0 +1,136 @@
+// Widget Box
+.widget { 
+    .widget-title { color: currentColor; font-size: initial; }
+    div.is-divider { margin-bottom: 1.5em; }
+    margin-bottom: 2.75em; 
+
+    a { 
+        transition: @transition;
+        &:hover { }
+    }
+}
+// Footer Widget #2 Properties
+div.footer-2 div.widget {
+    a { 
+        color: currentColor; 
+        &:hover {  opacity: .7; }
+    }
+    .post-date > div {
+        color: currentColor;
+    }
+    div.social-icons a {
+        color: currentColor;
+    }
+}
+// Product Categories
+.widget_product_categories {
+    ul { margin-top: -.5em; }
+    ul > li .count { opacity: 1; color: inherit; font-weight: bold; font-size: .7em; color: @accent; }
+
+    li.cat-item.active > a { font-weight: bold; opacity: 1; color: @primary!important; }
+    li.cat-item.active li.menu-item > a { opacity: 1; color: @primary; }
+    li.cat-item:not(.active) > a, 
+    li.menu-item > a, 
+    a > span, 
+    div > a:first-of-type {  
+        opacity: .8; 
+        &:hover { opacity: 1; }
+    }
+}
+// Flatsome Recent Posts
+#wrapper div.widget.flatsome_recent_posts {
+    overflow: hidden;
+    -webkit-mask-image: linear-gradient(to right, rgba(0,0,0,1) 80%, rgba(0,0,0,0));
+
+    div > a { 
+        margin: -.2em 0 .25em; 
+        width: 100%;
+        white-space: nowrap;
+    }
+}
+// Tag Cloud
+#wrapper .widget_product_tag_cloud, #wrapper .widget_tag_cloud {
+    a { 
+        padding: .5em 1em;
+        margin-bottom: .5em; margin-right: 0.1em;
+        border-color: currentColor; 
+        border-radius: 10em;
+        opacity: .3;
+        font-size: .7em!important;
+        color: currentColor;
+        font-weight: bolder;
+        // line-height: 1em;
+        &:hover { background: transparent; color: @accent; opacity: 1;}
+    }
+}
+// Product List
+#wrapper [class*="_products"] {
+    
+    .product_list_widget {
+        font-size: .9em;
+        > li  {
+            border: none;
+            border-bottom: 1px solid rgba(@dark, 10%);
+            padding-top: 1.25em;
+            margin-bottom: 1.25em;
+            min-height: 6em;
+            &:first-of-type { margin-top: none; }
+            &:last-of-type { border: none; }
+
+            > a {
+                width: 100%;
+                white-space: nowrap;
+                display: block;
+                img { top: auto; }
+                span { 
+                    &:hover { opacity: 1; }
+                }
+            }
+            .star-rating { font-size: .8em; }
+            .amount { color: currentColor; opacity: .8; font-size: .9em; }
+        }
+    }
+}
+// Filter By Ratinngs
+#wrapper  aside.widget.widget_rating_filter a { font-size: initial; }
+// Filter By Price
+.widget.widget_price_filter {
+    div.price_slider { margin: 1.75em 0; }
+    div.ui-slider-range { background: rgba(@dark, 3%);}
+    span.ui-slider-handle { background: @accent;}
+    div.price_slider_amount {
+        .price_label { padding-top: 1em; }
+        button { background: @secondary; font-size: 1em; }
+    }
+}
+// Recent Comments
+#wrapper .widget.widget_recent_comments {
+    font-size: .8em;
+    span.comment-author-link { margin-bottom: -.5em; a { text-decoration: underline; } }
+    a:not(.url) {
+        transition: @transition;
+        min-width: 100%;
+        display: inline-block!important;
+        font-size: initial;
+        margin-top: -2em;
+        opacity: .8;
+    }
+}
+// Post Archive, Categories
+#wrapper .widget.widget_archive, #wrapper .widget.widget_categories {
+    color: currentColor;
+    li { 
+        a { 
+            transition: @transition;
+            color: @primary; 
+            font-size: initial; 
+            font-weight: initial; 
+            padding-right: .5em;
+            opacity: .8;
+            &:hover { color: darken(@primary, 20%); opacity: 1;}
+        }
+        color: @accent;
+        font-size: .7em;
+        font-weight: bold;
+    }
+}

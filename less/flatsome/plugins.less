@@ -1,0 +1,124 @@
+// Contact Form7 Plugin
+#wrapper &.wpcf7 {
+
+	form { margin: 0; }
+	textarea { min-height: 70px; }
+	input[type="submit"] { text-transform: initial;}
+
+	p:last-of-type { 
+		display: inline-block;
+	}
+
+	div.wpcf7-response-output:not(:empty) {
+		margin: 0;
+		// display: inline-block;
+		background: rgba(@alert, 5%);
+		border: 1px solid rgba(@alert, 20%);
+		padding: 1em 1em;
+		border-radius: @theme-radius;
+		border-color: rgba(@alert,20%);
+		color: @alert;
+		font-size: .8em;
+		font-weight: bold;
+		&::before { content: "x";  margin-right: .5em; line-height: 0; }
+	}
+	form.sent div.wpcf7-response-output:not(:empty) {
+		background: rgba(@success, 5%);
+		border: 1px solid rgba(@success, 20%)!important;
+		color: @success;
+		&::before { content: "✓"; margin-right: .5em; }
+	}
+	.form-flat.row-flex-wrap { 
+		div.flex-col { margin: 0; padding: 0;}
+		.button {
+			padding-left: 1.25em;
+			padding-right: 1.5em;
+			margin: 0;
+			border-top-right-radius: 99px!important;
+			border-bottom-right-radius: 99px!important;
+		}
+	}
+
+	img.wpcf7-captchac { background-color: @light; border-radius: @theme-radius; }
+}
+// Mailer Lite Plugin
+[class*="ml-form"] {
+	form { line-height: 0; margin: 0; }
+	p { margin-bottom: 0; }
+	input {
+		margin-bottom: .5em;
+	}
+	label {
+		width: 100%;
+		display: flex;
+		align-items: center;
+		margin: .5em 0 1em 0;
+
+		input { margin-right: .5em; }
+		input, p { margin-bottom: 0!important; }
+	}
+	.button { width: 100%; padding: 1.5em / 1.35; }
+	.ml-form-successContent { text-align: center; h3 { color: @dark; margin-bottom: 0; }}
+
+	input {
+		width: 100%;
+		&[type="submit"] { background: @secondary; }
+		&.error { border-color: rgba(@dark, 10%); color: @dark;  }
+	}
+
+	.mailerlite-subscribe-button-container	{ width: 100%; }
+	.mailerlite-form-inputs {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-end;
+
+		& > div {
+			padding: 0 0 0 .5em;
+		}
+	}
+
+	.mailerlite-form-field {
+		margin: 0;
+		width: 100%;
+		position: relative; z-index: 1;
+	}
+
+	label.error {
+		// top: 0; right: 0;
+		// &::after {
+		// 	width: 0;
+		// 	height: 0;
+		// 	border-top: 5px solid transparent;
+		// 	border-bottom: 5px solid transparent;
+		// 	content: "";
+		// 	left: -5px; top: .5em;
+		// 	position: absolute;
+		// 	box-sizing: border-box;
+		// 	border-right: 5px solid @alert;
+		// }
+	}
+
+	@media only screen  and (max-device-width : 420px) {
+		input { margin-bottom: 1em / 1.25; &[type="submit"] { margin-top: 1em / 1.25; } }
+		// label.error { right: 0; }
+		.mailerlite-form-inputs {
+			flex-direction: column;
+			& > div { padding: 0; }
+		}
+	}
+}
+//	Cookie Notice Plugin
+#cookie-notice {
+	background: @dark;
+	display: flex;
+	.cookie-notice-container {
+		display: inline-flex;
+	    justify-content: center;
+	    align-items: center;
+		.button { margin: 0; &:first-of-type { margin-left: 1em; margin-right: 1em; }}
+		@media only screen  and (max-device-width : 420px) {
+			flex-direction: column;
+			.cn-text-container { margin-bottom: 1em;  }
+		}
+	}
+}

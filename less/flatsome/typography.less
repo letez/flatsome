@@ -1,0 +1,145 @@
+// Header Properties
+h1 { 
+    font-size: 3em; 
+    line-height: 1em;
+    margin: 0 0 .15em 0;
+    &:only-child, &:last-child { margin-bottom: 0; }
+}
+h2
+{ 
+    font-size: 2.25em; 
+    line-height: 1.25em;
+    margin: 0 0 .4em 0;
+    &:only-child, &:last-child { margin-bottom: 0; }
+}
+h3 { 
+    font-size: 1.5em; 
+    line-height: 1.25em; 
+    margin: 0 0 .5em 0;
+    &:only-child, &:last-child { margin-bottom: 0; }
+}
+h4 { 
+    font-size: 1.25em;  
+    line-height: 1em; 
+    margin: 0 0 .5em 0;
+    &:only-child, &:last-child { margin-bottom: 0; }
+}
+h5 { 
+    font-size: 1em; 
+    margin: 0 0 .75em 0;
+    &:only-child, &:last-child { margin-bottom: 0; }
+}
+h6 { 
+    font-size: .8em; 
+    font-weight: bold; 
+    margin: 0 0 .75em 0;
+    &:only-child, &:last-child { margin-bottom: 0; }
+}
+// Paragraph Properties
+p:not(.lead):not(.form-row) {  
+    font-size: 1em; 
+    line-height: 1.75em;
+    margin: 0 0 1.25em 0;
+    &:only-child, &:last-child { margin-bottom: 0; }
+    small { 
+        line-height: 1.75em; 
+    }
+    &.alt-font { 
+        line-height: 1.25em; 
+    }
+}
+// Lead Paragraph
+#wrapper p.lead { 
+    font-size: 1.25em; 
+    line-height: 1.75em;
+    margin: 0 0 1.25em 0;
+    &:only-child, &:last-child { margin-bottom: 0; }
+    &.uppercase { line-height: 1.5em ;}
+}
+// Strong Paragraph Properties
+p > strong { 
+    font-weight: 600; 
+}
+// Strikethrough Style
+del { 
+    opacity: .5; 
+    text-decoration-color: @secondary; 
+}
+// Quotation Block
+blockquote {
+    border-color: @secondary;
+    strong { color: @secondary; }
+    margin-bottom: 2em;
+    &:only-child, &:last-child { margin-bottom: 0; }
+}
+// List Styles
+ul, ol {
+    > li[class*="bullet-arrow"] {padding-left: 1.15em; &:last-of-type { border-width: 0; } }
+    > li[class*="bullet-"] {padding-top: .5em; padding-bottom: .7em; &:last-of-type { border-bottom-color: transparent; } }
+    > li { padding-top: .25em; padding-bottom: .25em; }
+
+    li[class*="bullet-arrow"]::before { color: @primary; font-weight: bold; top: .6em; }
+    li[class*="bullet-star"]::before { color: @secondary;  top: .6em; }
+    li[class*="bullet-checkmark"]::before { color: @success; top: .6em; } 
+}
+// Table Default Styles
+table, caption, tbody, tfoot, thead, tr, th, td { 
+    font-size: initial;
+    color: currentColor;
+}
+// Table Proprerties
+table {
+    thead {
+        tr > th, tr > td {
+            font-size: 1em;
+        }        
+    }
+    tbody {
+        tr > th, tr > td {
+            font-size: .9em;
+        }
+    }
+    tfoot {
+        tr > th, tr > td {
+            font-size: .9em;
+        }
+    }
+}
+// Heder span underline style
+h2, h3, h4, h5, h6, p {
+    span[style *="underline"] {
+        text-decoration-color: @secondary!important;
+    }
+}
+//
+legend, label { 
+    font-size: .9em;
+}
+// Hmm? :P 
+#wrapper .product-meta p { 
+    margin-bottom: 0!important; 
+}
+// Fancy Text Underline Style
+#wrapper span.fancy-underline::after { 
+    mask: url("img/underline.png");
+    -webkit-mask-box-image: url("img/underline.png");
+    mask-type: alpha;
+    background-image: none;
+    background-color: lighten(@secondary,5%);
+}
+// Font Sizes
+#wrapper .is-xsmall { font-size: .7em; }
+#wrapper .is-smaller { font-size: .75em; }
+#wrapper .is-small { font-size: .85em; }
+#wrapper .is-large { font-size: 1.1em; }
+#wrapper .is-larger { font-size: 1.2em; }
+#wrapper .is-xlarge { font-size: 1.3em; }
+#wrapper .uppercase { letter-spacing: 0em;}
+// Exceptions
+h3#ship-to-different-address { font-size: 1em; }
+// Global Hyprlink Styles
+#main, #footer {
+    a:not(.icon):not(.button):not(.plain):not(.quick-view):not([href*="#"]) { 
+        &:hover {  }
+    }
+}

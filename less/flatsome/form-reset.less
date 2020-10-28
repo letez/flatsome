@@ -1,0 +1,17 @@
+// RESET
+input[type='email'], input[type='date'], input[type='search']:not(.ux-search-submit), input[type='number'],
+input[type='text'], input[type='checkbox'], input[type='tel'], input[type='url'], input[type='password'], textarea, select,
+.select-resize-ghost, .select2-container .select2-choice, .select2-container, .select2-selection, .select2-results__options {
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none!important;
+	border: none;
+	&:-webkit-autofill,
+	&:-webkit-autofill:hover,
+	&:-webkit-autofill:focus,
+	:-webkit-autofill:active { -webkit-box-shadow: 0 0 0 200em @light inset !important; box-shadow: 0 0 0 200em @light inset !important; }
+	margin: 0;
+	z-index: 0;
+	border-radius: @theme-radius;
+	line-height: inherit;
+}

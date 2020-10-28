@@ -1,0 +1,16 @@
+// Error & Notifications
+span.wpcf7-form-control-wrap span.wpcf7-not-valid-tip, #weapper label.error {
+	position: absolute;
+	background: @alert;
+	color: @light;
+	width: auto;
+	font-size: .6em;
+	font-weight: 900;
+	opacity: 1;
+	line-height: 0;
+	padding: 1.25em 1.5em;
+	border-radius: @theme-radius;
+	box-shadow: 0px 10px 19px rgba(0,0,0,0.15), 0px 1px 1px rgba(0,0,0,0.3);
+	top: -2px; right: -.5em;
+	&::after { border-color: transparent; border-right-color: @alert; border-width: 5px; left: 0; top: .75em; }
+}

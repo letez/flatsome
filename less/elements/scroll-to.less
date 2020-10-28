@@ -1,0 +1,19 @@
+div.scroll-to-bullets {
+    right: .5em;
+	a { 
+        background: none; 
+        box-shadow: none; 
+        width: 12px; 
+        height: 12px; 
+        border-width: 2px; 
+        border-color: @accent; 
+    }
+    a.active { 
+        border-color: @accent; 
+        background: @accent; 
+    }
+    a:hover { 
+        border-color: lighten(@accent,10%); 
+        background-color: lighten(@accent,10%); 
+    }
+}

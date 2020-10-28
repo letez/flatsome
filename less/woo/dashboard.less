@@ -1,0 +1,35 @@
+.woocommerce-downloads .woocommerce {
+    a.button { font-size: .97em; display: table-cell!important; }
+}
+//	Addresses
+#wrapper {
+    address { 
+        padding: 1.5em;
+        background: rgba(@dark, 2%);
+        border: 1px solid rgba(@dark, 10%);
+        border-radius: @theme-radius;
+        display: inline-flex;
+        flex-direction: column;
+        min-width: 100%;
+
+        p[class*="phone"] { 
+            font-size: .8em;
+            // font-weight: bold;
+            border-bottom: 1px solid rgba(@dark, 10%);
+            margin-top: 1.5em;
+            padding-bottom: 0.25em;
+            margin-bottom: 0!important;
+            opacity: .7;
+        }
+        p[class*="email"] { 
+            font-size: .8em; 
+            opacity: .7;
+        }
+    }
+
+    div[class*="col-"].woocommerce-Address { 
+        h3 { margin-bottom: 1.5em; }
+        width: 50%;
+        address { width: 100%;  }
+    }
+}

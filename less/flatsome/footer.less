@@ -1,0 +1,23 @@
+footer {
+	font-size: .9em;
+	[class*="_products"] { font-size: initial; }
+}
+footer#footer, section.footer-bottom {
+	.footer-small > .col-inner {
+		display: table;
+		height: 100%;
+		& > div.row { display: table-footer-group; }
+	}
+
+	.absolute-footer {
+		padding: 0 0;
+		div.container {
+			display: flex;
+			align-items: center;
+			flex-direction: row-reverse;
+			> div { flex: 1 1 auto; }
+			.payment-icons { transform: scale(.8);}
+			.footer-secondary { text-align: right;}
+		}
+	}
+}

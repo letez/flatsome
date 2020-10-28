@@ -1,0 +1,28 @@
+#wrapper .nav-pagination {
+	margin: 2em 0 0;
+	> li { 
+		padding: 0 .25em; 
+		> a:not(.prev):not(.next) {
+			transition: @transition;
+			border: none;
+			color: currentColor;
+			opacity: .5;
+			&:hover { opacity: 1; background: transparent; }
+		}	
+		a.prev, a.next { 
+			transform: @transition;
+			border: none; 
+			opacity: .2;
+			color: @dark;
+			i::before { font-weight: bold; }
+			&:hover { background: initial; color: currentColor; opacity: 1;}
+		}
+		span.current { 
+			border-radius: 0;
+			border: initial;
+			border-bottom: 2px solid @primary;
+			color: @primary; 
+			background: transparent; 
+		}
+	}
+}

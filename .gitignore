@@ -1,0 +1,16 @@
+.vscode/sftp.json
+
+# flatsome-child/theme.php
+flatsome-child/style.css
+# flatsome-child/components/component.vue
+# flatsome-child/img/*
+
+# less/_variables.less
+# less/style.less
+# less/theme.less
+
+node_modules
+yarn-error.log
+yarn.lock
+
+.DS_Store

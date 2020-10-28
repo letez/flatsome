@@ -1,0 +1,27 @@
+.lightbox { 
+        
+    .mfp-bg.off-canvas.dark { 
+        opacity: .95;
+        background-color: @dark; 
+        color: @light; 
+    }
+
+    .mfp-bg.off-canvas:not(.dark) {
+        opacity: .95;
+        background-color: @light; 
+        color: @dark; 
+    }
+
+    .mfp-wrap {
+        // UI
+        @import url("../flatsome/lightbox-ui.less");
+        // MOBILE MENU
+        @import url("../flatsome/lightbox-mobile-menu.less");
+        // GALLERY
+        @import url("../flatsome/lightbox-gallery.less");
+        // SEARCH
+        @import url("../flatsome/lightbox-search.less");
+        // QUICK VIEW
+        @import url("../flatsome/lightbox-quick-view.less");        
+    }
+}

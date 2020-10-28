@@ -1,0 +1,116 @@
+// Forms Style
+input[type='email'], input[type='date'], input[type='search']:not(.ux-search-submit), input[type='number'], input[type='text'],
+input[type='tel'], input[type='url'], input[type='password'], textarea, select, .select2-selection, select option, img.wpcf7-captchac {
+
+	padding-left: .75em;
+	height: 2.75em;
+
+	&::placeholder, &::-webkit-input-placeholder { opacity: .3; }
+
+	&.wpcf7-captchac { width: unset; vertical-align: middle; border: unset!important; opacity: 1; }
+	&.orderby { border-radius: @field-radius; }
+
+	& when (@theme-form = normal) {
+		background: linear-gradient(0deg, rgba(@dark,0.030) 0%, rgba(@dark,0.015) 20%, rgba(@light, 0) 100%);
+		border: 1px solid rgba(@dark, 20%);
+		&::placeholder, &::-webkit-input-placeholder { opacity: .3; }
+	}
+	& when (@theme-form = flat) {
+		background: rgba(@dark, 3%);
+		border: 1px solid rgba(@dark, 10%);
+	}
+	& when (@theme-form = clean) {
+		border: 1px solid rgba(@dark, 10%);
+	}
+	& when (@theme-form = minimal) {
+		border-bottom: 2px solid rgba(@dark, 10%);
+	}
+}
+// Floated Form
+// div.fl-wrap.fl-is-active, .mfp-content div.fl-wrap.fl-is-active {
+// 	border: 1px solid red;
+// 	label:not([for*="comments"]) { opacity: .25; left: .5em * 1.35; top: .5em / 1.5!important; }
+// }
+
+//  Select 2 Form
+span.select2-container {
+	margin: 0;
+	& when (@theme-form = normal) {}
+	& when (@theme-form = flat) {
+		.select2-selection { border: 1px solid rgba(@dark, 10%); background: rgba(@dark, 3%); }
+		.select2-dropdown  { border: 1px solid rgba(@dark, 10%); background: @light; }
+		.select2-search { border: none; background: rgba(@dark, 3%); .select2-search__field { border: none; background: rgba(@dark, 5%); } }
+		.select2-results__option[data-selected="true"] { background: rgba(@dark, 10%); font-weight: bold; }
+		.select2-results__option--highlighted[data-selected] { background: rgba(@dark, 3%); color: @dark; }
+	}
+	& when (@theme-form = clean) {
+		.select2-selection, .select2-dropdown { border: 1px solid rgba(@dark, 10%); }
+		.select2-search { border: 1px solid rgba(@dark, 10%); .select2-search__field { border: none; } }
+		.select2-results__option[data-selected="true"] { background: rgba(@dark, 10%); font-weight: bold; }
+		.select2-results__option--highlighted[data-selected] { background: rgba(@dark, 5%);  color: @dark; }
+	}
+	// & when (@theme-form = minimal) {
+	// 	border-bottom: 2px solid rgba(@dark, 10%);
+	// }
+}
+#wrapper span.select2-selection {
+	margin: 0;
+	height: inherit;
+	border-radius: @theme-radius;
+    padding: 0;
+    .select2-selection__rendered { padding: .2em .75em; border: none; background: none; }
+}
+html .select2-container.select2-container--default.select2-container--open {
+
+    .select2-search__field {
+        border: initial!important;
+        background: rgba(@dark,3%);
+        padding: .35em .75em .5em;
+    }
+    
+    .select2-dropdown {
+        margin-top: -10px;
+        border: 1px solid rgba(@dark,10%);
+        border-top: none;
+        border-bottom-left-radius: @field-radius;
+        border-bottom-right-radius: @field-radius;
+    }
+
+    li { border-radius: none; margin: .25em; }
+    [data-selected="true"] {
+        background: rgba(@dark, 3%);
+    }
+    [aria-selected="true"][data-selected="false"]{
+        background: rgba(@dark, 3%);
+    }
+    [aria-selected="false"] {
+        border-color: none;
+        color: @dark!important;
+    }
+
+    li.select2-results__option--highlighted {
+        background-color: rgba(@primary, 10%);
+        border-color: none;
+        color: @dark!important;
+    }
+}
+// Form General
+form {
+
+	margin: 0;
+
+	abbr.required { color: @alert; }
+	
+	.flex-col {
+		input:first-of-type { border-top-right-radius: 0!important; border-bottom-right-radius: 0!important; }
+		button:last-of-type { border-top-left-radius: 0!important; border-bottom-left-radius: 0!important; }
+	}
+
+	p { margin-bottom: .75em!important; }
+
+	input[type="submit"] { margin-top: 1.5em; }
+
+	.create-account {
+		span { font-weight: bold; font-size: .9em; line-height: 0!important;}
+	}
+}

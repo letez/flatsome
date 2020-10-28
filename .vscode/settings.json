@@ -1,0 +1,20 @@
+{
+    "editor.cursorSmoothCaretAnimation": true,
+    "workbench.fontAliasing": "antialiased",
+    "workbench.colorTheme": "Tokyo Night Storm",
+    "workbench.preferredHighContrastColorTheme": "Tokyo Night",
+    "workbench.preferredDarkColorTheme": "Tokyo Night",
+    "less.compile": {
+        "main": ["${workspaceRoot}/less/style.less"],
+        "out": "../flatsome-child/",
+        "relativeUrls": false,
+        "compress": false,
+    },
+    "editor.cursorBlinking": "phase",
+    "editor.cursorStyle": "line-thin",
+    "editor.renderWhitespace": "trailing",
+    "workbench.colorCustomizations": {
+        "editor.selectionBackground": "#464E6F"
+    },
+    "git.ignoreLimitWarning": true,
+}

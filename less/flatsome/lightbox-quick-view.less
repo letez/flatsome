@@ -1,0 +1,24 @@
+div.product-quick-view-container  {
+
+    border-radius: @theme-radius;
+    overflow: hidden;
+    background: @light;
+
+    div.product-lightbox-inner {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+
+        padding: 2em 2em 0!important;
+
+        font-size: initial;
+        text-align: center;
+
+        div.is-divider { margin: 1em auto; }
+        div.product-short-description { flex: 1 }
+    }
+    .woocommerce-variation-add-to-cart {
+        display: flex;
+        button { flex: 1; margin-bottom: 0; }
+    }
+}

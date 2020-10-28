@@ -1,1 +1,2 @@
 # flatsome
+WP Flatsome Theme

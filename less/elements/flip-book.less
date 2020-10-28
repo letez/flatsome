@@ -1,0 +1,32 @@
+div.flipContainer {
+    display: flex;
+    /// Product Image
+    div.featured-product {
+
+    }
+    /// Product Info
+    div.product-info {
+        padding: 2em;
+        div.product-short-description {
+            margin: 1.5em 0;
+        }
+        div:last-of-type {
+            margin-bottom: 2em;
+        }
+        a.button {
+            padding: .85em 2em;
+            display: table-cell;
+        }
+        @media only screen  and (min-device-width : 768px) {
+            max-height: 600px;
+        }
+    }
+    // Slider button position
+    .flickity-button { 
+        margin-right: -10%;
+        margin-left: -10%;
+    }
+    div.row {
+        height: auto;
+    }
+}

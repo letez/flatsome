@@ -1,0 +1,106 @@
+body.blog, body.single-post, body.search, body.category, body.archive {
+	// Read More Button
+	a.more-link { 
+		span { display: none; }
+	}
+	// @media only screen  and (max-device-width : 420px) {
+	//     form input { width: 100%; }
+	//     p.stars { padding: 1em 0; margin-left: 0em; font-size: .8em; }
+	// }
+
+	// Blog Headers
+	header.archive-page-header {
+		.page-title { 
+			text-align: left;
+			text-transform: initial;
+			margin-bottom: 2em; 
+		}
+	}
+	// Entry
+	header.entry-header {
+
+		.entry-category {
+			a { 
+				transition: @transition;
+				opacity: .5;
+				color: currentColor; 
+				&:hover { opacity: 1; text-decoration: underline;}
+			}
+		}
+		.entry-title { margin: .5em 0 0.25em;}
+		.entry-divider { 
+			margin: .12em .5em .12em 0;
+			display: inline-block; 
+		}
+		.entry-meta { 
+			display: inline-block;
+		}
+	}
+	div.entry-image {
+		margin: 1em 0;
+	}
+	div.entry-content {
+		p { margin-bottom: 2em; }
+		div.blog-share { margin: 2em 0 1em;}
+		blockquote { margin: 3em 0; }
+	}
+	footer.entry-meta {
+		padding: 2.25em 0;
+		a { transition: @transition; }
+	}
+	div.entry-author {
+
+	}
+	div.article-inner nav.navigation-post {
+		.next-prev-nav { 
+			padding: 1em 0; 
+			.flex-col { border: initial;}
+		}
+		.nav-next a, .nav-prev a { 
+			transition: @transition;
+			// font-size: .8em;
+			opacity: .8;
+			&:hover { opacity: 1;}
+			i { 
+				font-size: initial;
+				border: none;  
+				color: @accent;
+				&::before {
+					font-weight: 900;
+				}
+			}
+		}
+	}
+	// Entry Comments
+	div#comments {
+		h3 { text-transform: initial; }
+		ol {
+			margin-bottom: 4em;
+			li {
+				margin: 0em 0 2em;
+				padding-top: 2em; 
+				div.comment-content { margin: .5em 0 1.5em;}
+				
+				ul { 
+					margin-bottom: 0;
+					li:last-of-type { margin-bottom: 0;}
+				}
+			}
+		}
+	}
+	// Entry Comment Respond
+	div#respond {
+		padding: 2em; margin-top: 2em;
+		background: rgba(@dark, 2%);
+		border: 1px solid rgba(@dark, 10%);
+		border-radius: @theme-radius;
+		position: sticky;
+
+		form { margin-bottom: 0; padding-bottom: 0; }
+		form input.submit { margin: 0; }
+
+		@media only screen  and (max-device-width : 420px) {
+			padding: 1em;
+		}
+	}
+}

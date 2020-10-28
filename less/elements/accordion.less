@@ -1,0 +1,26 @@
+div.accordion {
+	margin-bottom: 1.5em; 
+	.accordion-item {
+		// display: flex;
+		// flex-direction: column;
+		// justify-content: space-between;
+
+		.accordion-title {
+			font-size: initial;
+			display: flex;
+			justify-items: center;
+			align-items: center;
+			padding: 1em 0;
+			border-color: rgba(@dark, 10%);
+			font-weight: bold;
+			button { position: relative;  font-size: .6em; margin-top: -.05em; }
+			transition: @transition;
+		}
+
+		.active { button { margin-top: -0.2em; } }
+		&:first-child  a { border-width: 0; }
+		div.accordion-inner {
+			padding: 1.75em 1.75em 1.25em;
+		}
+	}
+}

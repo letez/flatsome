@@ -1,0 +1,43 @@
+#wrapper div.tabbed-content {
+
+
+	ul.nav {
+		a { transition: @transition; }
+		margin-top: 1em;
+		li { padding-top: 0; padding-bottom: 0; }
+	}
+
+	.nav:not(.nav-vertical):not(.nav-tabs) {
+		&.nav-left li { margin-right: 1em; }
+		&.nav-center li { margin-left: .5em; margin-right: .5em; }
+		&.nav-right li { margin-left: 1em; }
+	}
+
+	.nav:not(.nav-vertical).nav-pills, .nav:not(.nav-vertical).nav-outline  {
+		a { padding: .35em 1.5em; }
+		&.nav-center li { margin-left: 0; margin-right: 0; }
+	}	
+
+	ul.nav-tabs:not(.nav-vertical) {
+		a { padding: 1em 2em;  }
+		li { margin: 0 0 -1px 0; }
+		li:not(.active) a { 
+			background: rgba(@dark, 1%);
+			border-color: rgba(@dark, 3%);
+		}
+	}
+
+	.nav-vertical {
+		li { padding-top: 0; padding-bottom: 0; }
+		a { padding: 1em 1.5em; } 
+	}
+
+	.nav-outline.nav-vertical, .nav-pills.nav-vertical {
+		padding-right: 1em;
+		li {
+			width: 100%;
+			border-color: transparent; 
+		}
+		a { padding: .5em 1.5em; } 
+	}
+}
