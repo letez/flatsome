@@ -5,6 +5,10 @@
   "engines": {
     "node": ">=0.5.0"
   },
+  "scripts": {
+    "git-ignore": "git update-index --assume-unchanged 'less/_variables.less'; git update-index --assume-unchanged 'less/theme.less'; git update-index --assume-unchanged 'flatsome-child/theme.php'; git update-index --assume-unchanged 'flatsome-child/components/component.vue';",
+    "git-unignore": "git update-index --no-assume-unchanged 'less/_variables.less'; git update-index --no-assume-unchanged 'less/theme.less'; git update-index --no-assume-unchanged 'flatsome-child/theme.php'; git update-index --no-assume-unchanged 'flatsome-child/components/component.vue';"
+  },  
   "dependencies": {
   }
 }
