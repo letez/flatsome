@@ -1,14 +1,21 @@
 // Forms Style
-input[type='email'], input[type='date'], input[type='search']:not(.ux-search-submit), input[type='number'], input[type='text'],
+input[type='submit'], input[type='email'], input[type='date'], input[type='search']:not(.ux-search-submit), input[type='number'], input[type='text'],
 input[type='tel'], input[type='url'], input[type='password'], textarea, select, .select2-selection, select option, img.wpcf7-captchac {
 
-	padding-left: .75em;
-	height: 2.75em;
+	padding-left: 1em;
+	height: 3.5em;
 
 	&::placeholder, &::-webkit-input-placeholder { opacity: .3; }
 
-	&.wpcf7-captchac { width: unset; vertical-align: middle; border: unset!important; opacity: 1; }
+	// &.wpcf7-captchac { width: unset; vertical-align: middle; border: unset!important; opacity: 1; }
+	&.wpcf7-captchac {  width: auto; border: 1em solid @light; margin-left: 0; opacity: 1; }
 	&.orderby { border-radius: @field-radius; }
+
+	&[type="submit"] {
+		padding: 1.628em 2em; 
+		margin: 0;
+		line-height: 0;
+	}
 
 	& when (@theme-form = normal) {
 		background: linear-gradient(0deg, rgba(@dark,0.030) 0%, rgba(@dark,0.015) 20%, rgba(@light, 0) 100%);

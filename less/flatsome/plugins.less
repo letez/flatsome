@@ -1,17 +1,13 @@
 // Contact Form7 Plugin
-#wrapper &.wpcf7 {
+.wpcf7 {
 
-	form { margin: 0; }
-	textarea { min-height: 70px; }
-	input[type="submit"] { text-transform: initial;}
-
-	p:last-of-type { 
-		display: inline-block;
+	label { 
+		display: inline-flex;
+		input { margin-right: .25em; }
 	}
 
 	div.wpcf7-response-output:not(:empty) {
 		margin: 0;
-		// display: inline-block;
 		background: rgba(@alert, 5%);
 		border: 1px solid rgba(@alert, 20%);
 		padding: 1em 1em;
@@ -53,6 +49,7 @@
 		display: flex;
 		align-items: center;
 		margin: .5em 0 1em 0;
+		display: inline-flex;
 
 		input { margin-right: .5em; }
 		input, p { margin-bottom: 0!important; }
