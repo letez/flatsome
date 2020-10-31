@@ -1,5 +1,4 @@
 div.slider-wrapper, div.slider.flipContainer {
-
 	.dot { 
 		border-width: 2px; 
 		min-width: 10px;
@@ -12,14 +11,12 @@ div.slider-wrapper, div.slider.flipContainer {
 		top: 0; 
 		height: 100%; 
 
-		// &:hover svg { background: initial; }
-		
 		svg.flickity-button-icon { 
 			padding: 31%;
 		}
 		font-size: 100%;
 		min-width: 3em; min-height: 3em;
-	}	
+	}
 
 	.slider-nav-light {
 		.dot { border-color: @light; }
@@ -29,6 +26,7 @@ div.slider-wrapper, div.slider.flipContainer {
 			transition: @transition;
 			border-color: @light;
 			opacity: .5;
+			background: transparent;
 			.arrow { fill: @light; };
 			&:hover .arrow { fill: @light; }
 			&:hover { background: initial; opacity: 1; }
@@ -43,8 +41,9 @@ div.slider-wrapper, div.slider.flipContainer {
 			transition: @transition;
 			border-color: @dark;
 			opacity: .2;
-			.arrow { transition: initial!important; fill: @dark; };
-			&:hover .arrow { fill: @dark!important; }
+			background: transparent;
+			.arrow { fill: @dark; };
+			&:hover .arrow { fill: @dark; }
 			&:hover { background: initial; opacity: .5; }
 		}
 		.flickity-button .arrow { fill: @dark!important; }
@@ -56,13 +55,32 @@ div.slider-wrapper, div.slider.flipContainer {
 		}
 	}
 
-	.slider-nav-outside {
+	.slider-nav-outside {		
 		.flickity-viewport { 
 			margin-top: 2em; margin-bottom: 2em;
 		}
-		.flickity-button { 
-			margin-right: -3%;
-			margin-left: -3%;
+		.flickity-button {
+			&.previous { right: 99.5%; }
+			&.next { left: 99.5%; }
+		}
+		&:hover { 
+			button.flickity-button.previous { right: 100%;} 
+			button.flickity-button.next { left: 100%;} 
+		}				
+		&.slider-nav-circle .flickity-button {
+			margin-right: 7%;
+			margin-left: 7%;
+		}
+		&.slider-nav-simple .flickity-button {
+			margin-right: 3%;
+			margin-left: 3%;
+		}
+		&.slider-nav-reveal .flickity-button {
+			margin-right: 0%;
+			margin-left: 0%;
+			box-shadow: 0 -25px 50px 0 rgba(0,0,0,0.3);
+			border-radius: 0!important;
+			&:hover { top : 0; }
 		}
 		.flickity-page-dots { bottom: 1.5em; }
 	}
@@ -77,5 +95,22 @@ div.slider-wrapper, div.slider.flipContainer {
 			}
 		}
 		// border: 1px solid red;
+	}
+}
+
+.row.row-full-width { 
+	.slider-nav-outside {
+		&.slider-nav-circle .flickity-button {
+			margin-right: -10%;
+			margin-left: -10%;
+		}
+		&.slider-nav-simple .flickity-button {
+			margin-right: -10%;
+			margin-left: -10%;
+		}
+		&.slider-nav-reveal .flickity-button {
+			margin-right: 0%;
+			margin-left: 0%;
+		}
 	}
 }

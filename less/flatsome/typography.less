@@ -40,7 +40,7 @@ p:not(.lead):not(.form-row) {
     font-size: 1em; 
     line-height: 1.75em;
     margin: 0 0 1.25em 0;
-    &:only-child { margin-bottom: 0; }
+    // &:only-child { margin-bottom: 0; }
     small { 
         line-height: 1.75em; 
     }
@@ -76,7 +76,7 @@ blockquote {
 ul, ol {
     > li[class*="bullet-arrow"] {padding-left: 1.15em; &:last-of-type { border-width: 0; } }
     > li[class*="bullet-"] {padding-top: .5em; padding-bottom: .7em; &:last-of-type { border-bottom-color: transparent; } }
-    > li { padding-top: .25em; padding-bottom: .25em; }
+    // > li { padding-top: .15em; padding-bottom: .15em; }
 
     li[class*="bullet-arrow"]::before { color: @primary; font-weight: bold; top: .6em; }
     li[class*="bullet-star"]::before { color: @secondary;  top: .6em; }
@@ -126,7 +126,13 @@ legend, label {
     mask-type: alpha;
     background-image: none;
     background-color: lighten(@secondary,5%);
+    margin-top: -.1em;
+	@media only screen  and (max-device-width : 420px) {
+        margin-top: -.25em;
+	}    
 }
+// Letter Case 
+#wrapper .lowecase { text-transform: lowercase; }
 // Font Sizes
 #wrapper .is-xsmall { font-size: .7em; }
 #wrapper .is-smaller { font-size: .75em; }
