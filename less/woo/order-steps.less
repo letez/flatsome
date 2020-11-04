@@ -115,7 +115,7 @@
     border-color: rgba(@dark,10%);
     border-width: 1px;
     border-radius: @theme-radius;
-    background: rgba(@dark,2%);
+    &.has-border { background: rgba(@dark,2%); }
     margin-bottom: 2em;
     div.flex-col { 
         @media only screen  and (max-device-width : 420px) {
@@ -132,10 +132,9 @@
         }
     }
     button {
-        border-top-right-radius: @field-radius;
-        border-bottom-right-radius: @field-radius;
-        padding: 0 2em;
         border: initial;
+        border-top-right-radius: @field-radius!important;
+        border-bottom-right-radius: @field-radius!important;
         @media only screen  and (max-device-width : 420px) {
             border-radius: initial;
         }
@@ -164,8 +163,9 @@
     }
 }
 //	Coupon Block
-form.checkout_coupon {}
+form.checkout_coupon { background: none;}
 //	Shop Payment Icons
+div.payment-icons { margin-top: 1.5em; }
 div.payment-icons {}
 //	Shop Checkout Step Navigation
 nav.checkout-breadcrumbs { 
