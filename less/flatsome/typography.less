@@ -1,70 +1,72 @@
 // Header Properties
-h1 { 
-    font-size: 3em; 
+h1 {
+    font-size: 3em;
     line-height: 1em;
     margin: 0 0 .15em 0;
     &:only-child { margin-bottom: 0; }
 }
 h2
-{ 
-    font-size: 2.25em; 
+{
+    font-size: 2.25em;
     line-height: 1.25em;
     margin: 0 0 .4em 0;
     &:only-child { margin-bottom: 0; }
 }
-h3 { 
-    font-size: 1.5em; 
-    line-height: 1.25em; 
+h3 {
+    font-size: 1.5em;
+    line-height: 1.25em;
     margin: 0 0 .5em 0;
     &:only-child { margin-bottom: 0; }
 }
-h4 { 
-    font-size: 1.25em;  
-    line-height: 1em; 
+h4 {
+    font-size: 1.25em;
+    line-height: 1em;
     margin: 0 0 .5em 0;
     &:only-child { margin-bottom: 0; }
 }
-h5 { 
-    font-size: 1em; 
+h5 {
+    font-size: 1em;
     margin: 0 0 .75em 0;
     &:only-child { margin-bottom: 0; }
 }
-h6 { 
-    font-size: .8em; 
-    font-weight: bold; 
+h6 {
+    font-size: .8em;
+    font-weight: bold;
     margin: 0 0 .75em 0;
     &:only-child { margin-bottom: 0; }
 }
 // Paragraph Properties
-p:not(.lead):not(.form-row) {  
-    font-size: 1em; 
+p:not(.lead):not(.form-row) {
+    font-size: 1em;
     line-height: 1.75em;
     margin: 0 0 1.25em 0;
     // &:only-child { margin-bottom: 0; }
-    small { 
-        line-height: 1.75em; 
+    small {
+        line-height: 1.75em;
     }
-    &.alt-font { 
-        line-height: 1.25em; 
+    &.alt-font {
+        line-height: 1.25em;
     }
 }
 // Lead Paragraph
-p.lead { 
-    font-size: 1.5em; 
+p.lead {
+    font-size: 1.5em;
     line-height: 1.5em;
     margin-bottom: 1.5em;
     &:only-child { margin-bottom: 0;}
     &.uppercase { line-height: 1.5em ;}
 }
 // Strong Paragraph Properties
-p span > strong { 
-    font-weight: bold; 
+p span > strong {
+    font-weight: bold;
 }
 // Strikethrough Style
-del { 
-    opacity: .5; 
-    text-decoration-color: @secondary; 
+del {
+    opacity: .5;
+    text-decoration-color: @secondary;
+
 }
+
 // Quotation Block
 blockquote {
     border-color: @secondary;
@@ -80,10 +82,10 @@ ul, ol {
 
     li[class*="bullet-arrow"]::before { color: @primary; font-weight: bold; top: .6em; }
     li[class*="bullet-star"]::before { color: @secondary;  top: .6em; }
-    li[class*="bullet-checkmark"]::before { color: @success; top: .6em; } 
+    li[class*="bullet-checkmark"]::before { color: @success; top: .6em; }
 }
 // Table Default Styles
-table, caption, tbody, tfoot, thead, tr, th, td { 
+table, caption, tbody, tfoot, thead, tr, th, td {
     font-size: inherit;
     color: currentColor;
 }
@@ -92,7 +94,7 @@ table, caption, tbody, tfoot, thead, tr, th, td {
     thead {
         tr > th, tr > td {
             // font-size: inherit;
-        }        
+        }
     }
     tbody {
         tr > th, tr > td {
@@ -107,31 +109,36 @@ table, caption, tbody, tfoot, thead, tr, th, td {
 }
 // Heder span underline style
 h2, h3, h4, h5, h6, p {
-    span[style *="underline"] {
-        text-decoration-color: @secondary!important;
+    span[style ="text-decoration: underline;"] {
+        text-decoration-color: none;
+        strong {
+            text-decoration: underline;
+            text-decoration-color: @secondary;
+        }
     }
+    a strong, a span { text-decoration-color: currentColor!important;}
 }
 //
-legend, label { 
+legend, label {
     font-size: .9em;
 }
-// Hmm? :P 
-#wrapper .product-meta p { 
-    margin-bottom: 0!important; 
+// Hmm? :P
+#wrapper .product-meta p {
+    margin-bottom: 0!important;
 }
 // Fancy Text Underline Style
-#wrapper span.fancy-underline::after { 
+#wrapper span.fancy-underline::after {
     mask: url("img/underline.png");
     -webkit-mask-box-image: url("img/underline.png");
     mask-type: alpha;
     background-image: none;
     background-color: lighten(@secondary,5%);
-    margin-top: -.1em;
+    margin-top: -.25em;
 	@media only screen  and (max-device-width : 420px) {
-        margin-top: -.25em;
-	}    
+        margin-top: -.35em;
+	}
 }
-// Letter Case 
+// Letter Case
 #wrapper .lowecase { text-transform: lowercase; }
 // Font Sizes
 #wrapper .is-xsmall { font-size: .7em; }
@@ -145,7 +152,7 @@ legend, label {
 h3#ship-to-different-address { font-size: 1em; }
 // Global Hyprlink Styles
 #main, #footer {
-    a:not(.icon):not(.button):not(.plain):not(.quick-view):not([href*="#"]) { 
+    a:not(.icon):not(.button):not(.plain):not(.quick-view):not([href*="#"]) {
         &:hover {  }
     }
 }

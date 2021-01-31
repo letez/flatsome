@@ -11,6 +11,10 @@
 })
 (Vue);
 
+// PARTICLES ANIMATED BACKGROUNDS
+particlesJS.load('particles-js', '../wp-content/themes/flatsome-child/assets/particles-00.json', function() {});
+particlesJS.load('particles-js', '../wp-content/themes/flatsome-child/assets/particles-01.json', function() {});
+
 (function($) {
 	// Above the Fold Section - Slider / Banner Support (.fold-top, .fold-bottom)
 	if($("section.fold-top").find("div.slider").length !== 0) {

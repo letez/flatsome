@@ -21,6 +21,7 @@
 	overflow: hidden;
 	& .banner-layers { overflow: hidden; }
 }
+.has-events { * { pointer-events: all; } }
 .has-noevents { * { pointer-events: none; } }
 .has-scale-80 { transform: scale(.8); }
 .has-opacity-5 { opacity: .05; }
@@ -60,3 +61,5 @@
 .has-radius { border-radius: 3px; overflow: hidden; }
 .flex-top { align-items: start; }
 .font-light * { font-weight: 300; }
+
+#particles-js { position: absolute; left: 0; top: 0; width: 100%; min-height: 100%; canvas { min-height: -webkit-fill-available; }}

@@ -1,6 +1,6 @@
 body.blog, body.single-post, body.search, body.category, body.archive {
 	// Read More Button
-	a.more-link { 
+	a.more-link {
 		span { display: none; }
 	}
 	// @media only screen  and (max-device-width : 420px) {
@@ -8,31 +8,36 @@ body.blog, body.single-post, body.search, body.category, body.archive {
 	//     p.stars { padding: 1em 0; margin-left: 0em; font-size: .8em; }
 	// }
 
+	// Blog Post Badge
+	.badge .badge-inner {
+		background-color: @secondary;
+	}
+
 	// Blog Headers
 	header.archive-page-header {
-		.page-title { 
+		.page-title {
 			text-align: left;
 			text-transform: initial;
-			margin-bottom: 2em; 
+			margin-bottom: 2em;
 		}
 	}
 	// Entry
 	header.entry-header {
 
 		.entry-category {
-			a { 
+			a {
 				transition: @transition;
 				opacity: .5;
-				color: currentColor; 
+				color: currentColor;
 				&:hover { opacity: 1; text-decoration: underline;}
 			}
 		}
 		.entry-title { margin: .5em 0 0.25em;}
-		.entry-divider { 
+		.entry-divider {
 			margin: .12em .5em .12em 0;
-			display: inline-block; 
+			display: inline-block;
 		}
-		.entry-meta { 
+		.entry-meta {
 			display: inline-block;
 		}
 	}
@@ -52,18 +57,18 @@ body.blog, body.single-post, body.search, body.category, body.archive {
 
 	}
 	div.article-inner nav.navigation-post {
-		.next-prev-nav { 
-			padding: 1em 0; 
+		.next-prev-nav {
+			padding: 1em 0;
 			.flex-col { border: initial;}
 		}
-		.nav-next a, .nav-prev a { 
+		.nav-next a, .nav-prev a {
 			transition: @transition;
 			// font-size: .8em;
 			opacity: .8;
 			&:hover { opacity: 1;}
-			i { 
+			i {
 				font-size: initial;
-				border: none;  
+				border: none;
 				color: @accent;
 				&::before {
 					font-weight: 900;
@@ -78,10 +83,10 @@ body.blog, body.single-post, body.search, body.category, body.archive {
 			margin-bottom: 4em;
 			li {
 				margin: 0em 0 2em;
-				padding-top: 2em; 
+				padding-top: 2em;
 				div.comment-content { margin: .5em 0 1.5em;}
-				
-				ul { 
+
+				ul {
 					margin-bottom: 0;
 					li:last-of-type { margin-bottom: 0;}
 				}
